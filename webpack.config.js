@@ -119,6 +119,9 @@ const app = {
       }
     ]
   },
+  node: { // https://github.com/webpack-contrib/css-loader/issues/447#issuecomment-285603267
+    fs: 'empty'
+  },
   plugins: [
     new CleanWebpackPlugin(`${dist}`),
     new BrowserSyncPlugin({
