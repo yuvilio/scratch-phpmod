@@ -1,0 +1,16 @@
+{
+    "name": "yuvilio/scratch-phpmod",
+    "description": "phpmod notebook libs",
+    "type": "project",
+    "config": {
+      "vendor-dir": "lib/composer-libs"
+    },
+    "require-dev": {
+        "phan/phan": "^1.2.8"
+    },
+    "authors": [
+        {
+            "name": "yuvilio"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+// width
+w_single = 960px
+w_main = 704px
+w_sub = 256px
+
+base = 16
+
+// color
+c_primary = #82000A
+c_primaryNext = #89078F
+c_secondary = #08344F
+
+c_black = #000
+c_gray9 = #222222 // text
+c_gray8 = #5A5D61 // text
+c_gray7 = #9FA3A8 // text
+c_gray2 = #D2D6DB // border
+c_gray1 = #F4F6F8 // bg
+c_white = #fff
+
+c_success = #88c459
+c_error = #e20c0c
+c_warning = #fff24b
+
+// font-size
+f_5xl = 2.5rem
+f_4xl = 2rem
+f_3xl = 1.8rem
+f_2xl = 1.6rem
+f_xl = 1.4rem
+f_l = 1.2rem
+f_m = 1rem
+f_s = .8rem
+f_xs = .6rem
+
+// speed
+s_fast = .3s
+s_default = .4s
+s_slow = .5s
+
+pc()
+  @media all and (min-width: 768px)
+    {block}
+
+clearfix()
+  &:after
+    content ''
+    display block
+    clear both
+
+.showSP
+  display block
+  +pc()
+    display none
+.showPC
+  display none
+  +pc()
+    display block

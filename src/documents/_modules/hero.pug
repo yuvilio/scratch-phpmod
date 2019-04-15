@@ -1,0 +1,12 @@
+mixin hero(data)
+  .hero
+    .hero__bg
+      img(
+        src!=`${data.img}`
+        alt='hero'
+      )
+    .hero__txts
+      .hero__title
+        span #{data.title}
+      p
+        | #{data.txt}

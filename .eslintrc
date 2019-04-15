@@ -1,0 +1,24 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "indent": ["error", 2],
+    "semi": [2 , "never"],
+    "strict": "off",
+    "no-plusplus": off,
+    "comma-dangle": [0],
+    "arrow-body-style": off,
+    "brace-style": ["error", "stroustrup", {
+        "allowSingleLine": true
+      }
+    ],
+    "no-restricted-globals": off,
+    "prefer-destructuring": off,
+    "global-require": off,
+    "import/no-dynamic-require": 0
+  },
+  "globals": {
+    "window": true,
+    "location": true,
+    "document": true,
+  },
+}

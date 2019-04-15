@@ -1,0 +1,36 @@
+.layout
+  display grid
+  grid-template-areas 'h' 'm' 's' 'f'
+  grid-template-columns 100%
+  grid-template-rows auto
+  overflow-x hidden
+  &--single
+    +pc()
+      grid-template-areas 'h' 'm' 'f'
+      grid-template-columns 100%
+  &--double
+    +pc()
+      grid-template-areas 'h h h h' 'hero hero hero hero' '.. m s ..' 'f f f f'
+      grid-template-columns 1fr w_main w_sub 1fr
+      .layout__header
+        margin-bottom 4rem
+
+.layout__header
+  grid-area h
+  width 100%
+  position sticky
+  top 0
+  z-index 999
+
+.layout__main
+  grid-area m
+
+.layout__sub
+  grid-area s
+  padding .5rem
+
+.layout__footer
+  grid-area f
+
+.layout__hero
+  grid-area hero

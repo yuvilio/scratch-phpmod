@@ -1,0 +1,17 @@
+extends /_layouts/single
+
+
+append vars
+  -
+    var pageInfo = {
+      path: '/test',
+      title: 'A test page | static-pack',
+      description: 'Just testing some things'
+    }
+
+block main
+  article.container
+    h1
+      span testing
+    p
+      | #{pageInfo.description}

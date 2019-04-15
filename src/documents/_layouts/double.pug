@@ -1,0 +1,28 @@
+include /_modules/header
+include /_modules/footer
+
+block vars
+doctype html
+html(lang='ja' prefix="og: http://ogp.me/ns#")
+  head
+    title #{pageInfo.title}
+    meta(name='description', content=`${pageInfo.description}`)
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    meta(name='apple-mobile-web-app-capable' content='yes')
+    meta(
+      name='viewport',
+      content='width=device-width, initial-scale=1.0, shrink-to-fit=no'
+    )
+    link(rel='icon' href='/images/favicon.ico')
+    link(rel='apple-touch-icon' href='/images/apple-touch-icon.png')
+  body
+    .layout.layout--double
+      .layout__header
+        +header(pageInfo)
+      .layout__main
+        block main
+      .layout__sub
+        block sub
+      .layout__footer
+        +footer(pageInfo)

@@ -1,0 +1,74 @@
+{
+  "name": "static-pack",
+  "author": "socialrights.jp",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "watch": "npm-watch",
+    "lint:md": "remark --quiet content/**/*.md",
+    "lint:php": "phan",
+    "lint:php:php-cs-fixer": "php-cs-fixer -vv --dry-run --rules=@PSR1,@PSR2 fix cli/phpmod/"
+  },
+  "bin": {
+    "phan": "./lib/composer-libs/phan/phan/phan"
+  },
+  "watch": {
+    "lint:php": {
+      "patterns": [
+        "cli/phpmod/*/*",
+        "cli/phpmod/*/src/*"
+      ],
+      "extensions": [
+        "php"
+      ],
+      "ignore": "",
+      "quiet": false
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "autoprefixer": "^9.0.1",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.24.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "file-loader": "^1.1.11",
+    "globule": "^1.2.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "npm-watch": "^0.6.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "postcss-loader": "^2.1.5",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "stylelint": "^9.5.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "svg-sprite-loader": "^4.1.3",
+    "svg-transform-loader": "^2.0.3",
+    "svgo": "^1.1.1",
+    "svgo-loader": "^2.2.0",
+    "tailwindcss": "^0.7.4",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "@babel/runtime": "^7.3.1",
+    "bootstrap": "^4.2.1",
+    "jstransformer-highlight": "^2.0.0",
+    "jstransformer-markdown-it": "^2.1.0",
+    "markdown-it": "^8.4.2",
+    "object-fit-images": "^3.2.4",
+    "svgxuse": "^1.2.6"
+  }
+}

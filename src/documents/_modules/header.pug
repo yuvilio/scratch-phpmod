@@ -1,0 +1,14 @@
+//- set up the menu() mixin . called below when needed
+include /_modules/menu
+
+mixin header(pageInfo)
+  header.header
+    .header__inner
+      if pageInfo.path === '/'
+        h1.siteName
+          a(href='/') static-pack
+      else
+        p.siteName
+          a(href='/') static-pack
+
+      +menu(pageInfo)

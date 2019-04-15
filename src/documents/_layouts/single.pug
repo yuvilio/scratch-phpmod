@@ -1,0 +1,38 @@
+//- these are some things required for the header and footer 
+//- why are they both showing at the top? 
+//- because they don't actually carry out rendering. rather they set up mixins that will be called below
+include /_modules/header
+include /_modules/footer
+
+block vars
+doctype html
+html(lang='ja' prefix="og: http://ogp.me/ns#")
+  head
+    title #{pageInfo.title}
+    //- when interpolating a passed parameter use the ${} inside template literal quotes
+    meta(name='description', content=`${pageInfo.description}`)
+    
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    meta(name='apple-mobile-web-app-capable' content='yes')
+    meta(
+      name='viewport',
+      content='width=device-width, initial-scale=1.0, shrink-to-fit=no'
+    )
+    link(rel='icon' href='/images/favicon.ico')
+    link(rel='apple-touch-icon' href='/images/apple-touch-icon.png')
+    //- if you look at the source you'll see a link to style.css appear right around here. 
+    //- but there's no actual link here. what's up with that?
+    //- i think it's inserted by webpack's style-loader MiniCssExtractPlugin 
+    //- similar for style.js
+    // this is an html comment
+  body
+    .layout.layout--single.please(class=`${pageInfo.pageClass}`)
+      .layout__header
+        //-the header() mixin can be found in modules/header 
+        +header(pageInfo)
+      .layout__main
+        block main
+      .layout__footer
+        //- the footer() mixin can be found in modules/footer
+        +footer(pageInfo)

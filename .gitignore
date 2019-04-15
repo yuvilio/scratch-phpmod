@@ -1,0 +1,9 @@
+/node_modules
+/dist
+
+composer.lock
+lib/composer-libs/
+vendor/
+
+npm-debug.log
+.php_cs.cache

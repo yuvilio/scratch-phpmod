@@ -1,0 +1,26 @@
+extends /_layouts/single
+
+
+append vars
+  -
+    var pageInfo = {
+      path: '/mast7/ch01/',
+      title: 'modern css chapter 3 | scroll-snap',
+      description: 'scroll-snap',
+      pageClass: 'modern-css-ch03'
+    }
+
+block main
+  article.container
+    h1
+      span modern css chapter 3
+    p
+      | #{pageInfo.description}
+      .ex-01-snap-slide
+        .container.mx-auto.px-4 a more modern way than just overflow to add a scrollbar to items you want to have in the same row or column
+        .slideshow
+          img(src="http://placeimg.com/640/360/1")
+          img(src="http://placeimg.com/640/360/2")
+          img(src="http://placeimg.com/640/360/3")
+      include:markdown-it md/markdown-test.md
+            

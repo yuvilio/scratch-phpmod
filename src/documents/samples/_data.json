@@ -1,0 +1,26 @@
+{
+  "svg-sprite": {
+    "key" : "svg-sprite",
+    "title": "svg-sprite",
+    "description": "static-pack-pse6で使用している、svg-spriteについてのページです。",
+    "eyecatch": "/path/to/eyecatch.jpg",
+    "officialsite" : "https://github.com/jkphl/svg-sprite",
+    "usage": "<p>svgは下記のように、useタグのhrefに、# + ファイル名 と記述します。</p><pre>*pug記法です \n svg\n  use(xlink:href='#bars')\n svg\n  use(xlink:href='#close')\n svg\n  use(xlink:href='#apple')\n svg\n  use(xlink:href='#amazon')</pre><div class=\"columns\"><div class=\"row row--5050\"><div class=\"col\"><svg><use xlink:href=\"#bars\"></use></svg></div>\n<div class=\"col\"><svg><use xlink:href=\"#close\"></use></svg></div>\n<div class=\"col\"><svg><use xlink:href=\"#apple\"></use></svg></div>\n<div class=\"col\"><svg><use xlink:href=\"#amazon\"></use></svg></div></div></div><p>ちなみに、すでに入っているsvgファイルは、<a href=\"https://icomoon.io/\">icomoon</a>にて、font awesome をダウンロードして入れたものです。</p>"
+  },
+  "pug": {
+    "key" : "pug",
+    "title": "pug",
+    "description": "static-pack-pse6で使用している、pugについてのページです。",
+    "eyecatch": "",
+    "officialsite": "https://pugjs.org/api/getting-started.html",
+    "usage": "<h3>注意点</h3><p>テンプレートやパーツの出力しないフォルダ・ファイルはは<code>_○○○</code>のように、先頭にアンダーバー(_)を付けます。アンダーバーを付けないフォルダ・ファイルは全て出力されます。</p><h3>pugは使っても使わなくてもいい</h3><p>pugを使わなくても、html・phpのファイルはディレクトリ構造を保ったままdistフォルダに出力されます。その際、includeなど使えなくなるので、なるべく混在させない方がいいと思います。pugを使うか使わないかのどちらかです。</p><h3>ページ単位も、量産も</h3><p>普通にページ単位でのコンパイルと、jsonによる量産に対応しています。量産する場合は、フォルダの中に _data.json と _template.pug が必要です。このページが量産タイプで出力されているので、使い方の参考にしてください。</p>"
+  },
+  "stylus": {
+    "key" : "stylus",
+    "title": "stylus",
+    "description": "static-pack-pse6で使用している、stylusについてのページです。",
+    "eyecatch": "",
+    "officialsite": "http://stylus-lang.com/",
+    "usage": "<h3>注意点</h3><p>スタイラスでは、stylesフォルダ直下にindex.stylを置いて、全ての.stylファイルを読み込んでいます。読み込みの順序が大事になるので、prefixとして数字を置いたりアンダーバーを使用していたりします。</p><h3>リセットcssについて</h3><p>リセットcssはstylesフォルダではなく、1つ上の階層のindex.jsにて読み込み、stylusのファイル達と1つになりdistフォルダに出力されます。今のところファイル分割には対応していません。</p><h3>レスポンシブ対応</h3><p>基本的にスマホ用レイアウトで組んだ後に、PC用のレイアウトをメディアクエリで拡張していくといった流れを想定しています。<code>+pc()</code>と書くだけで簡単にメディアクエリを出力してくれます。</p>"
+  }
+}

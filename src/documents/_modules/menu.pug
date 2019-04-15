@@ -1,0 +1,12 @@
+mixin menu()
+  nav.menu
+    .menu__switch
+      svg.bar
+        use(xlink:href='#bars')
+      svg.close
+        use(xlink:href='#close')
+    .menu__content
+      ul.menuList
+        //- adding a page of my own here
+        li.menuList__item          
+          a(href='/modern-css/ch01') modern-css ch01

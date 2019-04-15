@@ -1,0 +1,22 @@
+.header
+  background linear-gradient(45deg, c_primary 0%, c_primaryNext 100%)
+  position relative
+  color c_white
+  &__inner
+    display flex
+    justify-content space-between
+    align-items center
+    padding .5rem 1rem
+    margin 0 auto
+    +pc()
+      width w_single
+  .siteName
+    padding .5rem 0
+    margin-bottom 0
+    font-weight bold
+    font-size f_l
+    line-height 1
+    a
+      color c_white
+      &:hover
+        text-decoration none

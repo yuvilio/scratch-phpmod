@@ -1,0 +1,130 @@
+body
+  color c_gray9
+  font-family 'Noto Sans Japanese', '游ゴシック体', YuGothic, 'Yu Gothic M', '游ゴシック Medium', 'Yu Gothic Medium', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif
+  font-size 1em
+  line-height 1.8
+img
+  max-width 100%
+  height auto
+svg
+  display block
+  max-width 100%
+  height 100%
+#svgDefs
+  display none
+li
+dd
+  img
+    vertical-align bottom
+h1
+  font-size 2rem
+a
+  &:hover
+    opacity .75
+section
+  margin-bottom 2rem
+ul
+ol
+  padding-left 1.5em
+
+table
+  border 1px solid c_gray2
+  margin-bottom 1rem
+thead
+  background-color c_gray9
+  th
+  td
+    padding .5em
+    border 1px solid c_gray2
+    color c_white
+    text-align center
+tbody
+  tr
+    &:nth-of-type(even)
+      background-color c_gray1
+  th
+  td
+    padding .5em
+    border 1px solid c_gray2
+pre
+  display block
+  padding 1rem
+  background-color c_gray1
+code
+  padding 0 .25em
+  background-color c_gray1
+  margin-bottom 1px
+q
+  padding .25em
+  background-color c_gray1
+  &:before
+    content '"'
+  &:after
+    content '"'
+blockquote
+  padding 3em 1em
+  background-color c_gray1
+  position relative
+  &:before
+    quote()
+    top 1em
+    left 1em
+  &:after
+    right 1em
+    bottom 1em
+    quote()
+    transform rotate(180deg)
+  & > *:nth-last-of-type(1)
+    margin-bottom 0
+  cite
+    display block
+    width calc(100% - 30px)
+    position absolute
+    right 62px
+    bottom 1em
+    text-align right
+    &:before
+      content '-'
+iframe
+  display block
+  margin-bottom 1rem
+.wp-caption
+  max-width 100%
+
+
+.columns
+  .row
+    display flex
+    flex-flow row wrap
+    justify-content center
+    // align-items center
+    &--5050
+      .col
+        flex 0 0 50%
+        margin 1rem auto
+    &--303030
+      .col
+        flex 0 0 30%
+        margin 0 auto
+        position relative
+        &:hover
+          opacity .75
+        p
+          text-align center
+        svg
+        img
+          height 114px
+          margin-bottom 1em
+          +pc()
+            height 200px
+        a
+          &:before
+            content ''
+            display block
+            width 100%
+            height 100%
+            position absolute
+            top 0
+            left 0
+            z-index 1
+            pointer-events auto

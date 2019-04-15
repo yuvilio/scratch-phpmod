@@ -1,0 +1,67 @@
+.menu__switch
+  width 40px
+  height 40px
+  padding .5rem
+  +pc()
+    display none
+  &.isOn
+    .close
+      display block
+    .bar
+      display none
+    & + .menu__content
+      display block
+      height auto
+      padding 3rem 1rem
+      line-height 1
+  svg
+    fill c_white
+    &.close
+      display none
+.menu__content
+  width 100vw
+  height 0
+  padding 0 1rem
+  background linear-gradient(45deg, c_primary 0%, c_primaryNext 100%)
+  overflow hidden
+  position absolute
+  top 100%
+  right 0
+  line-height 0
+  text-align center
+  transition all .3s
+  +pc()
+    display block
+    width auto
+    height auto
+    padding 0
+    background none
+    position static
+    line-height inherit
+.menuList
+  list-style none
+  padding-left 0
+  margin-bottom 0
+  +pc()
+    display flex
+    justify-content space-between
+  &__item
+    padding 1.5rem .5rem
+    position relative
+    font-size f_m
+    line-height 1
+    +pc()
+      padding .5rem 1rem
+  a
+    color c_white
+    text-decoration none
+    &:before
+      content ''
+      display block
+      width 100%
+      height 100%
+      position absolute
+      top 0
+      left 0
+      z-index 1
+      pointer-events auto

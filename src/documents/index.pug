@@ -1,0 +1,45 @@
+extends /_layouts/single
+
+include /_modules/hero
+
+append vars
+  -
+    var pageInfo = {
+      path: '/',
+      title: 'static-pack',
+      description: 'scratch-css'
+    }
+
+block main
+  -
+    var data = {
+      img: '/images/hero.jpg',
+      title: 'static-pack',
+      txt: 'webpack4'
+    }
+  +hero(data)
+  section.container
+    .container__inner
+      .container__head
+        h2
+          span head
+      .container__body
+        ul
+          li dev server → browsersync
+          li template engine → pug
+          li post css → stylus + stylint
+          li javascript → es6 + babel + eslint (jquery less)
+          li svg-sprite
+          li bootstrapのreboot.cssをリセットに使用
+          li css grid layout
+          li etc...
+  section.container
+    .container__inner
+      .container__head
+        h2
+          span test
+      .container__body
+        p
+          | test
+
+        

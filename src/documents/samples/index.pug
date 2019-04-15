@@ -1,0 +1,50 @@
+extends /_layouts/double
+
+append vars
+  -
+    var pageInfo = {
+      path: '/samples',
+      title: 'サンプルページ | static-pack',
+      description: 'static-packで使用しているツールを一部載せます。'
+    }
+
+block main
+  article.container
+    h1
+      span サンプルページ
+    p
+      | #{pageInfo.description}
+    .columns
+      .row.row--303030
+        .col
+          img(src='/images/svglogo.png', alt='svg-sprite')
+          p
+            a(href='/samples/svg-sprite.html') svg-sprite
+        .col
+          svg
+            use(xlink:href='#pug')
+          p
+            a(href='/samples/pug.html') pug
+        .col
+          svg
+            use(xlink:href='#stylus')
+          p
+            a(href='/samples/stylus.html') stylus
+        
+    
+        
+
+block sub
+  aside
+    ul.sideMenu
+      li.sideMenu__item
+        a(href='/') トップページ
+      li.sideMenu__item
+        a(href='/samples') サンプルページ
+        ul
+          li
+            a(href='/samples/svg-sprite.html') svg-sprite
+          li
+            a(href='/samples/pug.html') pug
+          li
+            a(href='/samples/stylus.html') stylus

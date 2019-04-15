@@ -1,0 +1,29 @@
+extends /_layouts/single
+
+
+append vars
+  -
+    var pageInfo = {
+      path: '/phpmod/ch01/',
+      title: 'modern css chapter 1 | static-pack',
+      description: 'Just testing some things',
+      pageClass: 'modern-css-ch01'
+    }
+
+block main
+  article.container
+    h1
+      span modern css chapter 1
+    p
+      | #{pageInfo.description}
+    div
+      :markdown-it(linkify langPrefix='highlight-')
+        # Markdown
+
+        Markdown document with http://links.com and
+
+        ```js
+        var codeBlocks1 = "23";
+        ```        
+    div 
+      include:markdown-it md/001-use.md
