@@ -2,6 +2,8 @@
 // enforce type hinting at compile time (compains )
 declare(strict_types=1);
 
+//type hinting.
+// why use it?  so we don't have to do checks (if is_string(){...}.) we can be confident that it's the expected type or it would have triggered an exception
 $register = function(string $email, int $age, bool $notify){
   // ...
   echo "registering email ${email}\n";
