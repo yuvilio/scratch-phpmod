@@ -31,7 +31,7 @@ return [
     // exclude from parsing. Actual value will exclude every
     // "test", "tests", "Test" and "Tests" folders found in
     // "vendor/" directory.
-    'exclude_file_regex' => '@^cli/phpmod/vendor/.*/(tests?|Tests?)/@',
+    // 'exclude_file_regex' => '@^vendor/.*/(tests?|Tests?)/@',
 
     // A directory list that defines files that will be excluded
     // from static analysis, but whose class and method
@@ -45,6 +45,6 @@ return [
     //       should be added to both the `directory_list`
     //       and `exclude_analysis_directory_list` arrays.
     'exclude_analysis_directory_list' => [
-      './cli/phpmod'
+      './cli/phpmod/*/vendor'
     ],
 ];

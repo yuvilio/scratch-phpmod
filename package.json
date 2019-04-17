@@ -1,17 +1,20 @@
 {
-  "name": "static-pack",
-  "author": "socialrights.jp",
+  "name": "scratch-phpmod",
+  "author": "yv",
   "license": "MIT",
+  "bin": {
+    "phan": "./lib/composer-libs/phan/phan/phan"
+  },
+  "engines": {
+    "node": "10.12.0"
+  },
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "watch": "npm-watch",
     "lint:md": "remark --quiet content/**/*.md",
-    "lint:php": "phan",
+    "lint:php": "./lib/composer-libs/phan/phan/phan --config-file .phan/config.php --directory cli/phpmod/  --exclude-directory-list cli/phpmod/*/vendor",
     "lint:php:php-cs-fixer": "php-cs-fixer -vv --dry-run --rules=@PSR1,@PSR2 fix cli/phpmod/"
-  },
-  "bin": {
-    "phan": "./lib/composer-libs/phan/phan/phan"
   },
   "watch": {
     "lint:php": {
