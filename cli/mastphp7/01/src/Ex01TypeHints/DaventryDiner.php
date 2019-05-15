@@ -1,20 +1,12 @@
 <?php
-namespace Ex01TypeHints;
+// DaventryDiner.php
 
-// composer installed libraries available without needing to require
-// require_once '../../vendor/autoload.php';
+namespace Ch01\Ex01TypeHints;
 
+//seems to be a minimum trivia class (matching the filename for the namespace to exist, even if not used
+class DaventryDiner { }
 
-// $loader = new Twig_Loader_Filesystem();
-// $twig = new Twig_Environment($loader, array(
-//     'cache' => '/path/to/compilation_cache',
-// ));
-// $twig->render(
-//     "Test string template: {{ result|humanize }}",
-//     array("result" => "mega_success")
-// );
-
-function registerOrder($name){
-
-  return "heya";
+//actual things we're exporting to use
+function takeOrder($name){
+  return "COming right up sir, " . $name;
 }
