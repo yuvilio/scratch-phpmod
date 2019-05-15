@@ -13,8 +13,8 @@
     "build": "webpack --mode production",
     "watch": "npm-watch",
     "lint:md": "remark --quiet content/**/*.md",
-    "lint:php": "./lib/composer-libs/phan/phan/phan --config-file .phan/config.php --directory cli/phpmod/  --exclude-directory-list cli/phpmod/*/vendor",
-    "lint:php:php-cs-fixer": "php-cs-fixer -vv --dry-run --rules=@PSR1,@PSR2 fix cli/phpmod/"
+    "lint:php": "./lib/composer-libs/phan/phan/phan --config-file .phan/config.php --directory cli/mastphp7/  --exclude-directory-list cli/mastphp7/*/vendor",
+    "lint:php:php-cs-fixer": "php-cs-fixer -vv --dry-run --rules=@PSR1,@PSR2 fix cli/mastphp7/"
   },
   "watch": {
     "lint:php": {
