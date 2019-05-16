@@ -19,29 +19,35 @@ class User {
   //
   function salary(){
 
+    // we're returning an object instance of a class (that we'll never need to use again)
     // setting up this class instance allows us to use a nifty trick, chaining
     // the payoff is an object we can call this way: $user->salary()->pay();
-
+    // notice we're passing IBAN and salary in as parameters since this class is
+    // completely cut off from the Salary class. has it's own properties
     return new class($this->IBAN, $this->salary) implements Salary {
 
-      //we creating a class that's just like Salary, but we're mixing into it
-      // an interface (pay()) which happens use a trait (Util ).
+      //we creating a class that's just like User, but we're mixing into it
+      // an interface Salary ( for pay()) which happens use a trait (Util ).
       //
       use Util;
+
+      // partially mirror the parts of the User class we need. since this is a class
+      // we're doing it in oop style (properties)
+      // make use of passed in User data  but in a completely separate way
       private $_IBAN;
       protected $_salary;
-
       public function __construct($IBAN, $salary){
 
           //we were called from a user class, so we were passed $IBAN and $salary.
-          // we'll need them, so store them in this object's properties 
+          // we'll need them, so store them in this object's properties
           //initialize values:
           $this->_IBAN = $IBAN;
           $this->_salary = $salary;
       }
 
 
-      // fulfill interface Salary's pay() method
+      // something different in this class from User
+      // it fullfills interface Salary's pay() method (which we call)
       public function pay(){
         // use mixed in trait Util's format() method
         echo $this->_IBAN . ' ' . $this->format($this->_salary);
