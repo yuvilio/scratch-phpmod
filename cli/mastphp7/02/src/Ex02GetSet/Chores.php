@@ -21,4 +21,10 @@ class Chores {
       return $this->assignee[$prop];
     }
 
+    // when printing the object (e.g.: echo $obj), a string representation we want to show
+    public function __toString()
+    {
+       return "Steward " . $this->assignee['name'] . " currently available. Role: {$this->assignee['role']}\n";
+    }
+
   }
