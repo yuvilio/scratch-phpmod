@@ -1,6 +1,6 @@
 const path = require('path')
 const globule = require('globule')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const autoprefixer = require('autoprefixer')
@@ -123,7 +123,8 @@ const app = {
     fs: 'empty'
   },
   plugins: [
-    new CleanWebpackPlugin(`${dist}`),
+    // new CleanWebpackPlugin(`${dist}`),
+    new CleanWebpackPlugin(),
     new BrowserSyncPlugin({
       server: {
         baseDir: dist
